@@ -1,4 +1,5 @@
 import AdminDashboard from "@/components/AdminDashboard";
+import ProductManagement from "@/components/ProductManagement";
 import Navigation from "@/components/Navigation";
 import { useState } from "react";
 
@@ -10,14 +11,7 @@ const Admin = () => {
       case "dashboard":
         return <AdminDashboard />;
       case "products":
-        return (
-          <div className="min-h-screen bg-background p-6 pt-20 md:pt-24">
-            <div className="max-w-7xl mx-auto">
-              <h1 className="text-3xl font-bold text-foreground mb-4">Products Management</h1>
-              <p className="text-muted-foreground">Manage your product catalog here.</p>
-            </div>
-          </div>
-        );
+        return <ProductManagement />;
       case "orders":
         return (
           <div className="min-h-screen bg-background p-6 pt-20 md:pt-24">
@@ -33,15 +27,6 @@ const Admin = () => {
             <div className="max-w-7xl mx-auto">
               <h1 className="text-3xl font-bold text-foreground mb-4">Customer Management</h1>
               <p className="text-muted-foreground">View and manage customer accounts.</p>
-            </div>
-          </div>
-        );
-      case "analytics":
-        return (
-          <div className="min-h-screen bg-background p-6 pt-20 md:pt-24">
-            <div className="max-w-7xl mx-auto">
-              <h1 className="text-3xl font-bold text-foreground mb-4">Analytics Dashboard</h1>
-              <p className="text-muted-foreground">Detailed analytics and reports.</p>
             </div>
           </div>
         );

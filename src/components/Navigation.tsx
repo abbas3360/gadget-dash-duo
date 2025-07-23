@@ -32,7 +32,6 @@ const Navigation = ({ type, activeTab, onTabChange }: NavigationProps) => {
     { id: "products", label: "Products", icon: Package },
     { id: "orders", label: "Orders", icon: ShoppingCart },
     { id: "customers", label: "Customers", icon: Users },
-    { id: "analytics", label: "Analytics", icon: BarChart3 },
     { id: "settings", label: "Settings", icon: Settings },
   ];
 
@@ -87,13 +86,6 @@ const Navigation = ({ type, activeTab, onTabChange }: NavigationProps) => {
 
             {/* Right Actions */}
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon">
-                <Search className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="relative">
-                <Bell className="h-4 w-4" />
-                <Badge className="absolute -top-1 -right-1 h-5 min-w-5 text-xs bg-destructive">5</Badge>
-              </Button>
               <Button variant="secondary" size="sm" className="flex items-center gap-2">
                 <User className="h-4 w-4" />
                 {type === "admin" ? "Admin" : "Alex"}
@@ -116,12 +108,9 @@ const Navigation = ({ type, activeTab, onTabChange }: NavigationProps) => {
                 <span className="text-lg font-bold text-foreground">Laptop Accessories</span>
               </div>
               <div className="flex items-center gap-2">
-                <Button variant="ghost" size="icon">
-                  <Search className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="icon" className="relative">
-                  <Bell className="h-4 w-4" />
-                  <Badge className="absolute -top-1 -right-1 h-4 min-w-4 text-xs bg-destructive">5</Badge>
+                <Button variant="secondary" size="sm" className="flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  {type === "admin" ? "Admin" : "Alex"}
                 </Button>
                 <Button 
                   variant="ghost" 

@@ -44,10 +44,6 @@ const AdminDashboard = () => {
             <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
             <p className="text-muted-foreground">Laptop Accessories Store Management</p>
           </div>
-          <Button variant="gradient" size="lg" className="w-full md:w-auto">
-            <Plus className="mr-2 h-4 w-4" />
-            Add New Product
-          </Button>
         </div>
 
         {/* Stats Cards */}
